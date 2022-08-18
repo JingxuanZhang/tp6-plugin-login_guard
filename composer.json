@@ -1,0 +1,32 @@
+{
+    "name": "moonpie/login-guard",
+    "description": "login guard for thinkphp6",
+    "version": "1.0.0",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Moonpie\\Tp6Plugin\\LoginGuard\\": "src/"
+        },
+        "files": [
+            "src/functions.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "chouyee",
+            "email": "875010341@qq.com"
+        }
+    ],
+    "require": {},
+    "extra": {
+        "think": {
+            "services": [
+                "Moonpie\\Tp6Plugin\\LoginGuard\\Service"
+            ],
+            "config": {
+                "login_guard": "configs/login_guard.php"
+            }
+        }
+    }
+}
