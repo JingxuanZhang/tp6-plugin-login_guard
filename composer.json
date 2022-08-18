@@ -18,7 +18,12 @@
             "email": "875010341@qq.com"
         }
     ],
-    "require": {},
+    "require": {
+        "topthink/framework": "^6.0"
+    },
+    "suggest": {
+        "topthink/think-migration": "^3.0"
+    },
     "extra": {
         "think": {
             "services": [
