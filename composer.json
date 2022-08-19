@@ -22,7 +22,7 @@
         "topthink/framework": "^6.0"
     },
     "suggest": {
-        "topthink/think-migration": "^3.0"
+        "topthink/think-migration": "require for db migration"
     },
     "extra": {
         "think": {
