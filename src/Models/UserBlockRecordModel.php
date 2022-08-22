@@ -165,4 +165,10 @@ class UserBlockRecordModel extends Model implements GuardInterface
         return static::VOTE_GIVE_UP;
     }
 
+    public function voteSceneAccountUnderLimit(
+        AccountWithStateInterface $account
+    ) {
+        return static::VOTE_ACCEPT;
+    }
+
 }

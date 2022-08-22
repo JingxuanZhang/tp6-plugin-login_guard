@@ -42,4 +42,11 @@ interface GuardInterface
      * @return string 投票结果
      */
     public function voteSceneNoAccount($accountType);
+
+    /**
+     * 决定用户在受限情况下如何处理请求
+     * @param AccountWithStateInterface $account
+     * @return string 投票结果
+     */
+    public function voteSceneAccountUnderLimit(AccountWithStateInterface $account);
 }

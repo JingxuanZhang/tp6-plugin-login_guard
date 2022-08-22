@@ -37,6 +37,12 @@ class LoginGuardMiddleware
             }
         }else {
             //有用户
+            //这里需要投票,用户登录成功,但还受限制的时候怎么办
+            $vote = $this->guard->voteSceneAccountUnderLimit($account);
+            if ($vote === GuardInterface::VOTE_REFUSED) {
+                $this->guard->logFailure($request, $account);
+                return $this->formatFailReason($request, $this->guard->getFailReason());
+            }
             if (!$this->loader->isAccountCreditVerified($request, $account)) {
                 $this->guard->logFailure($request, $account);
                 return $this->formatFailReason($request, $this->guard->getFailReason());
